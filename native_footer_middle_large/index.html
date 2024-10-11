@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>中央に大きなボタンがあるフッター</title>
+  <meta name="description" content="中央に大きなボタンがあるフッターのHTMLとCSS">
+  <meta property="og:url" content="https://isirmt.github.io/TemplateCSSPlain/native_footer_middle_large">
+  <meta property="og:title" content="中央に大きなボタンがあるフッター">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="中央に大きなボタンがあるフッターのHTMLとCSS">
+  <meta property="og:image" content="https://isirmt.github.io/TemplateCSSPlain/native_footer_middle_large/ogp.png">
+  <meta property="og:site_name" content="CSSテンプレート">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://isirmt.github.io/TemplateCSSPlain/native_footer_middle_large/ogp.png" />
+  <meta name="theme-color" content="#5f2dd3">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-style: normal;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: #5f2dd3;
+      width: 100%;
+      height: 3.5rem;
+
+      position: sticky;
+      top: 0;
+
+      font-size: large;
+      color: white;
+      font-weight: bold;
+
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      height: calc(100svh - 7.55rem);
+      overflow-y: scroll;
+    }
+
+    footer {
+      border-style: solid;
+      border-width: 1px 0 0 0;
+      border-color: lightgray;
+      background-color: white;
+
+      position: sticky;
+      width: 100%;
+      height: 4rem;
+      bottom: 0;
+      z-index: 100;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #center-frame {
+      background-color: lightgray;
+      border-radius: 3rem;
+
+      position: absolute;
+      width: 5.4rem;
+      height: 5.4rem;
+
+      bottom: .3rem;
+      z-index: 90;
+    }
+
+    #container {
+      background-color: white;
+
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 101;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    footer a {
+      position: relative;
+      display: block;
+      pointer-events: none;
+    }
+
+    footer a#center {
+      bottom: 1rem;
+    }
+
+    .item {
+      color: white;
+      border-radius: 10rem;
+      border-style: solid;
+      border-width: .2rem;
+      border-color: transparent;
+
+      width: 3rem;
+      height: 3rem;
+
+      font-weight: bold;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      pointer-events: auto;
+    }
+
+    a#center .item {
+      background-color: #5f2dd3;
+      border-color: white;
+      border-width: .15rem;
+      border-style: solid;
+
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .item svg {
+      fill: gray;
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+
+    a#center .item svg {
+      fill: white;
+      width: 2.7rem;
+      height: 2.7rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>ネイティブのようにフッターを配置する</header>
+  <main></main>
+
+  <footer>
+    <div id="center-frame"></div>
+    <div id="container">
+      <div><!-- 等間隔に確保するための空要素 --></div>
+      <a href="./">
+        <div class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M17.451 2.344a1 1 0 0 1 1.41-.099a12.05 12.05 0 0 1 3.048 4.064a1 1 0 1 1-1.818.836a10.05 10.05 0 0 0-2.54-3.39a1 1 0 0 1-.1-1.41zM5.136 2.245a1 1 0 0 1 1.312 1.51a10.05 10.05 0 0 0-2.54 3.39a1 1 0 1 1-1.817-.835a12.05 12.05 0 0 1 3.045-4.065M14.235 19c.865 0 1.322 1.024.745 1.668A4 4 0 0 1 12 22a4 4 0 0 1-2.98-1.332c-.552-.616-.158-1.579.634-1.661l.11-.006zM12 2c1.358 0 2.506.903 2.875 2.141l.046.171l.008.043a8.01 8.01 0 0 1 4.024 6.069l.028.287L19 11v2.931l.021.136a3 3 0 0 0 1.143 1.847l.167.117l.162.099c.86.487.56 1.766-.377 1.864L20 18H4c-1.028 0-1.387-1.364-.493-1.87a3 3 0 0 0 1.472-2.063L5 13.924l.001-2.97A8 8 0 0 1 8.822 4.5l.248-.146l.01-.043a3 3 0 0 1 2.562-2.29l.182-.017z" />
+          </svg>
+        </div>
+      </a>
+      <a href="./" id="center">
+        <div class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.707 2.293l9 9c.63.63.184 1.707-.707 1.707h-1v6a3 3 0 0 1-3 3h-1v-7a3 3 0 0 0-2.824-2.995L13 12h-2a3 3 0 0 0-3 3v7H7a3 3 0 0 1-3-3v-6H3c-.89 0-1.337-1.077-.707-1.707l9-9a1 1 0 0 1 1.414 0M13 14a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883-.993L11 14z" /></svg>
+        </div>
+      </a>
+      <a href="./">
+        <div class="item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 1-5 5l.005-.217A5 5 0 0 1 12 2m2 12a5 5 0 0 1 5 5v1a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1a5 5 0 0 1 5-5z" /></svg>
+        </div>
+      </a>
+      <div><!-- 等間隔に確保するための空要素 --></div>
+    </div>
+  </footer>
+</body>
+
+</html>
